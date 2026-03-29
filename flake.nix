@@ -22,6 +22,23 @@
         bws = final.callPackage ./pkgs/bws/package.nix { };
       };
 
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        {
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              gh
+              git
+              nix-update
+              python3
+            ];
+          };
+        }
+      );
+
       packages = forAllSystems (
         system:
         let
