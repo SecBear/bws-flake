@@ -2,7 +2,7 @@
 
 Standalone flake packaging the Bitwarden Secrets Manager CLI (`bws`) from source.
 
-Current packaged version: `2.0.0`
+Current packaged version: `2.1.0`
 
 ## Use as a package
 
